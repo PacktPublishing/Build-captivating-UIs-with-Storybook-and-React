@@ -1,6 +1,3 @@
-Based on the outline you provided, here's a draft README for your GitHub repository:
-
----
 
 # Build Captivating UIs with Storybook and React
 
