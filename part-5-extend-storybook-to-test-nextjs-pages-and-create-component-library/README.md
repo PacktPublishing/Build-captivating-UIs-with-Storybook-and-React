@@ -1,32 +1,33 @@
-# Build Captivating UIs with Storybook and React
+# Part 5 - Extend Storybook to Test Next.js Pages and Create Component Library
 
-## Part 5: Extend Storybook to Test Next.js Pages and Create Component Library
+Welcome to Part 5 of the "Build Captivating UIs with Storybook and React" tutorial series. In this chapter, we will learn how to extend Storybook to test Next.js pages and create a component library.
 
-This is Part 5 of the tutorial series on building captivating UIs with Storybook and React. In this part, we will extend Storybook to test Next.js pages and create a component library.
+## Table of Contents
 
-## Chapters
+1. [Introduction](#introduction)
+2. [Setting Up Storybook for Next.js](#setting-up-storybook-for-nextjs)
+3. [Creating a Component Library](#creating-a-component-library)
+4. [Testing Next.js Pages with Storybook](#c)
+5. [Conclusion](#conclusion)
 
-- [Chapter 1: Setting Up Storybook for Next.js](./chapter-1)
-- [Chapter 2: Creating Test Stories for Next.js Pages](./chapter-2)s
-- [Chapter 3: Building a Component Library](./chapter-3)
-- [Chapter 4: Integrating the Component Library with Next.js](./chapter-4)
-- [Chapter 5: Writing Tests for Next.js Pages](./chapter-5)
+## Introduction
 
-## Prerequisites
+In this section, we will provide an overview of what we will cover in this chapter and why it is important.
 
-Before starting with Part 5, make sure you have completed the previous parts of the tutorial series:
+## Setting Up Storybook for Next.js
 
-- [Part 1: Introduction to Storybook and React](../part-1-introduction-to-storybook-and-react/README.md)
-- [Part 2: Designing UI Components with Storybook](../part-2-designing-ui-components-with-storybook/README.md)
-- [Part 3: Documenting UI Components with Storybook](../part-3-documenting-ui-components-with-storybook/README.md)
-- [Part 4: Testing UI Components with Storybook](../part-4-testing-ui-components-with-storybook/README.md)
+In this section, we will guide you through the process of setting up Storybook for your Next.js project.
 
-## Getting Started
+## Creating a Component Library
 
-To get started with Part 5, navigate to the respective chapter folder and follow the instructions provided in each chapter.
+In this section, we will show you how to create a reusable component library using Storybook and React.
 
-## Feedback and Contributions
+## Testing Next.js Pages with Storybook
 
-If you have any feedback or would like to contribute to this tutorial series, please feel free to submit a pull request or open an issue on the [GitHub repository](https://github.com/your-username/your-repo).
+In this section, we will demonstrate how to use Storybook to test your Next.js pages.
 
-Happy coding!
+## Conclusion
+
+In this chapter, we have learned how to extend Storybook to test Next.js pages and create a component library. We hope you found this tutorial helpful and that it will enhance your UI development workflow.
+
+Stay tuned for the next chapter!
