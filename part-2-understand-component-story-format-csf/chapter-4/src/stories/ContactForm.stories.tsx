@@ -26,4 +26,38 @@ export const Blank: Story = {
   args: { },
 };
 
+export const PreFilled = {
+  args: {
+    subject: 'Support Request',
+    email: 'user@example.com',
+    message: 'I have a question about...',
+  },
+};
+
+
+export const PreFilledMobile = {
+  ...PreFilled,
+  parameters: {
+    viewports: { default: 'mobile' },
+  },
+};
+
+// Explicitly showing the optional render function (commented out)
+export const PreFilledSubjectOnly = {
+  // render: (args) => <ContactForm {...args} />, // Optional default render function
+  args: {
+    subject: 'Support Request', // Updated argument name
+  },
+};
+
+export const InFooter = {
+  render: ({ args }) => (
+    <footer style={{backgroundColor: 'gray',padding:'20px  '}}>
+      <ContactForm {...args} />
+      <Copyright />
+      <SocialLinks />
+    </footer>
+  ),
+};
+
 
