@@ -60,4 +60,18 @@ export const InFooter = {
   ),
 };
 
-
+export const AutoFilledAndSubmitForm = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const subjectInput = canvas.getByLabelText('subject', { selector: 'input' });
+    await userEvent.type(subjectInput, 'Test Subject', { delay: 100 });
+    const emailInput = canvas.getByLabelText('email', { selector: 'input' });
+    await userEvent.type(emailInput, 'example-email@email.com', { delay: 100 });
+    const messageInput = canvas.getByLabelText('message', { selector: 'textarea' }); 
+    await userEvent.type(messageInput, 'This is a test message.', { delay: 100 }); 
+    const submitButton = canvas.getByRole('button');
+    await userEvent.click(submitButton);
+    const successMessage = canvas.queryByText(/Success/i); // Case-insensitive search for "Success"
+    expect(successMessage).toBeInTheDocument(); // Assert success message is present
+  },
+};
