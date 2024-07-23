@@ -52,9 +52,9 @@ export const PreFilledSubjectOnly = {
 
 export const InFooter = {
   render: ({ args }) => (
-    <footer style={{backgroundColor: 'gray',padding:'20px  '}}>
+    <footer style={{backgroundColor: 'gray',padding:'20px', width:'500px'}}>
       <ContactForm {...args} />
-      <Copyright />
+      <Copyright /> 
       <SocialLinks />
     </footer>
   ),
@@ -63,12 +63,16 @@ export const InFooter = {
 export const AutoFilledAndSubmitForm = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const subjectInput = canvas.getByLabelText('subject', { selector: 'input' });
+   
+    const subjectInput = canvas.getByLabelText('Subject:', { selector: 'input' }); 
     await userEvent.type(subjectInput, 'Test Subject', { delay: 100 });
-    const emailInput = canvas.getByLabelText('email', { selector: 'input' });
+   
+    const emailInput = canvas.getByLabelText('Email:', { selector: 'input' });
     await userEvent.type(emailInput, 'example-email@email.com', { delay: 100 });
-    const messageInput = canvas.getByLabelText('message', { selector: 'textarea' }); 
+   
+    const messageInput = canvas.getByLabelText('Message:', { selector: 'textarea' }); 
     await userEvent.type(messageInput, 'This is a test message.', { delay: 100 }); 
+   
     const submitButton = canvas.getByRole('button');
     await userEvent.click(submitButton);
     const successMessage = canvas.queryByText(/Success/i); // Case-insensitive search for "Success"

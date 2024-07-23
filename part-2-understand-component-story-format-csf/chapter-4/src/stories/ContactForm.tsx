@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './button.css';
+
 export interface ContactFormProps {
   subject?: string;
   email?: string;
@@ -28,7 +29,6 @@ const styles = {
     minHeight: '100px',
   },
   button: {
-   
     backgroundColor: '#007bff',
     color: '#fff',
     padding: '10px 20px',
@@ -43,8 +43,22 @@ export const ContactForm = ({
   email = '',
   message = '',
 }: ContactFormProps) => {
+  const [subjectValue, setSubjectValue] = useState(subject);
+  const [emailValue, setEmailValue] = useState(email);
+  const [messageValue, setMessageValue] = useState(message);
+
+  const [complete, setComplete] = useState(false );
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setComplete(true)
+    // Handle form submission logic here
+    console.log('Form submitted:', { subject: subjectValue, email: emailValue, message: messageValue });
+
+  };
+
   return (
-    <form style={styles.form} className='storybook-button'  >
+    <form style={styles.form} className='storybook-button' onSubmit={handleSubmit}>
       <label htmlFor="subject" style={styles.label}>
         Subject:
       </label>
@@ -52,8 +66,9 @@ export const ContactForm = ({
         type="text"
         id="subject"
         name="subject"
-        value={subject}
+        value={subjectValue}
         style={styles.input}
+        onChange={(event) => setSubjectValue(event.target.value)}
       />
       <label htmlFor="email" style={styles.label}>
         Email:
@@ -62,16 +77,24 @@ export const ContactForm = ({
         type="email"
         id="email"
         name="email"
-        value={email}
+        value={emailValue}
         style={styles.input}
+        onChange={(event) => setEmailValue(event.target.value)}
       />
       <label htmlFor="message" style={styles.label}>
         Message:
       </label>
-      <textarea id="message" name="message" value={message} style={styles.textarea} />
+      <textarea
+        id="message"
+        name="message"
+        value={messageValue}
+        style={styles.textarea}
+        onChange={(event) => setMessageValue(event.target.value)}
+      />
       <button type="submit" style={styles.button} className='storybook-button'>
         Send
       </button>
+      {complete && <p> Form submitted with Success</p>}
     </form>
   );
 };
