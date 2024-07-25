@@ -52,7 +52,7 @@ export const PreFilledSubjectOnly = {
 
 export const InFooter = {
   render: ({ args }) => (
-    <footer style={{backgroundColor: 'gray',padding:'20px', width:'500px'}}>
+    <footer style={{backgroundColor: '#F2F2F2',padding:'20px', width:'700px$'}}>
       <ContactForm {...args} />
       <Copyright /> 
       <SocialLinks />
