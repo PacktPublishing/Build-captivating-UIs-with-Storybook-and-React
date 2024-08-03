@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'; 
 import { Avatar } from './Avatar'; 
+import { StatusSticker as FullnameSticker, BorderWrapper } from './decorators';
  
 const meta: Meta<typeof Avatar> = { 
   title: 'Example/Avatar', 
@@ -10,6 +11,8 @@ const meta: Meta<typeof Avatar> = {
       options: ['small', 'medium', 'large'], 
     }, 
   }, 
+  decorators: [BorderWrapper, FullnameSticker],
+  tags: ['autodocs'],
 }; 
  
 export default meta; 
@@ -36,18 +39,18 @@ export const Large: Story = {
   }, 
 }; 
 
-export const Sizes = {
-  render : (args) => {
-    return (
-      <div>
-        <Avatar size='small' name={args.name} />
-        <Avatar size='medium' name={args.name} />
-        <Avatar size='large' name={args.name} />
-      </div>
-    )
-  },
-  args: {
-    name: 'Michael Shilman',
-  },
-}
+// export const Sizes = {
+//   render : (args) => {
+//     return (
+//       <div>
+//         <Avatar size='small' name={args.name} />
+//         <Avatar size='medium' name={args.name} />
+//         <Avatar size='large' name={args.name} />
+//       </div>
+//     )
+//   },
+//   args: {
+//     name: 'Michael Shilman',
+//   },
+// }
  
