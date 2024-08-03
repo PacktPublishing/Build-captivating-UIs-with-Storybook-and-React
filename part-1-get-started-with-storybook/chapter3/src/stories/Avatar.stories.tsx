@@ -35,4 +35,19 @@ export const Large: Story = {
     size: 'large', 
   }, 
 }; 
+
+export const Sizes = {
+  render : (args) => {
+    return (
+      <div>
+        <Avatar size='small' name={args.name} />
+        <Avatar size='medium' name={args.name} />
+        <Avatar size='large' name={args.name} />
+      </div>
+    )
+  },
+  args: {
+    name: 'Michael Shilman',
+  },
+}
  
