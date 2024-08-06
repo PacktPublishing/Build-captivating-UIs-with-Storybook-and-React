@@ -36,6 +36,7 @@ export const Large: Story = {
   args: { 
     name: 'Jasper Katz', 
     size: 'large', 
+    active: true,
   }, 
 }; 
 

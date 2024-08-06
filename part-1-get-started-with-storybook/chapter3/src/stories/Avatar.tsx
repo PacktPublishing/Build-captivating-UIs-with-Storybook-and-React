@@ -1,17 +1,19 @@
 import React from 'react';
 import './avatar.css';
-interface AvatarProps {
+export interface AvatarProps {
   name: string;
   size: 'small' | 'medium' | 'large';
+  active: boolean;
 }
 
-export const Avatar: React.FC<AvatarProps> = ({ name, size }) => {
+export const Avatar: React.FC<AvatarProps> = ({ name, size, active }) => {
   const sizeClass = `avatar--${size}`;
+  const borderClass = active ? 'avatar--active' : 'avatar--inactive';
+
   return (
-    <div className={`avatar ${sizeClass}`}>
+    <div className={`avatar ${sizeClass} ${borderClass}`}>
       <span>{name[0].toUpperCase()}</span>
     </div>
   );
 };
-
 

@@ -8,6 +8,9 @@
     text-align: center;
     font-weight: bold;
     user-select: none;
+    position: relative;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width and height */
 }
 
 .avatar--small {
@@ -26,4 +29,12 @@
     width: 120px;
     height: 120px;
     font-size: 60px;
+}
+
+.avatar--active {
+    border: 3px solid green;
+}
+
+.avatar--inactive {
+    border: 3px solid gray;
 }

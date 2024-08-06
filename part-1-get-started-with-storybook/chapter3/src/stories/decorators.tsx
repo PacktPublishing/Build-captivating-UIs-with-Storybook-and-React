@@ -7,7 +7,7 @@ export const BorderWrapper = (Story, context) => (
 );
 
 export const PaddingWrapper = (Story, context) => (
-  <div style={{ padding: '10px' }}>
+  <div style={{ padding: '40px' }}>
     <Story />
   </div>
 )
@@ -26,10 +26,14 @@ export const StatusSticker = (Story, context) => {
     borderRadius: '5px',
   };
 
-  return (
-    <div style={statusStyle}>
-      <Story />
-      <div style={stickerStyle}>{context.args.name}</div>
-    </div>
-  );
+  const statusMessage = context.args.active
+  ? `${context.args.name} is active`
+  : `${context.args.name} is inactive`;
+
+return (
+  <div style={statusStyle}>
+    <Story />
+    <div style={stickerStyle}>{statusMessage}</div>
+  </div>
+);
 };
