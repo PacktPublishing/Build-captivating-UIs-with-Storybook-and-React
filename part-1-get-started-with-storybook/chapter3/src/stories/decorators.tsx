@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const BorderWrapper = (Story, context) => (
   <div style={{ border: '1px solid #000' }}>
@@ -36,4 +35,4 @@ return (
     <div style={stickerStyle}>{statusMessage}</div>
   </div>
 );
-};
+}

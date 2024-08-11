@@ -10,7 +10,7 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [],
+  decorators: [PaddingWrapper ],
 };
 
 export default preview;

@@ -5,7 +5,9 @@ export interface AvatarProps {
   size: 'small' | 'medium' | 'large';
   active: boolean;
 }
-
+/**
+ * Avatar component
+ */
 export const Avatar: React.FC<AvatarProps> = ({ name, size, active }) => {
   const sizeClass = `avatar--${size}`;
   const borderClass = active ? 'avatar--active' : 'avatar--inactive';
